@@ -14,7 +14,7 @@ class Moderation(commands.Cog):
     async def yazdır(self, ctx, *, mesaj):
         await ctx.message.delete()
         await ctx.send(mesaj)
-
+        
     @commands.command()
     async def selam(self, ctx):
         await ctx.send("selamm!! c:")
