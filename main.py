@@ -3,7 +3,7 @@ from discord.ext import commands
 import time
 import serverdata
 
-Bot =commands.Bot(command_prefix= "s!", intents= discord.Intents.all())
+Bot = commands.Bot(command_prefix= "s!", intents= discord.Intents.all())
 
 @Bot.event
 async def on_ready():
