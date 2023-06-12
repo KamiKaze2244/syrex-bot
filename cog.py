@@ -10,6 +10,7 @@ class Moderation(commands.Cog):
 
     
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def yazdır(self, ctx, *, mesaj):
         await ctx.message.delete()
         await ctx.send(mesaj)
