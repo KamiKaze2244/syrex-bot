@@ -58,4 +58,4 @@ async def on_guild_channel_delete(channel: discord.TextChannel):
 
 
 
-Bot.run("MTExNjczNDQ4ODg4MjQ2MjgzMA.GIKB7z.6d8dt4qX79sdzg9jC4B9_gHUqF-KROPJL7kDJY")
+Bot.run("")
