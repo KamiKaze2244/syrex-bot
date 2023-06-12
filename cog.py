@@ -19,6 +19,15 @@ class Moderation(commands.Cog):
         await ctx.send("selamm!! c:")
 
     @commands.command()
+    async def zenci(self, ctx):
+        await ctx.send("yapma dostum böyle bir komut yok hiç komik değilsin :ı")
+        
+    @commands.command()
+    async def niga(self, ctx):
+        await ctx.send("yapma dostum böyle bir komut yok hiç komik değilsin :ı")
+
+
+    @commands.command()
     async def espiri(self, ctx):
             e = random.randint(1,5)
             if e==1:
