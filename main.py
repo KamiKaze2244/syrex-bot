@@ -55,11 +55,11 @@ async def on_guild_channel_delete(channel: discord.TextChannel):
     print(channel.name, "isimli bir oda silindi")
     print("\n")
     
-@bot.command()
+@Bot.command()
 @commands.has_permissions(manage_messages=True)
-async def clear(ctx, amount=5):
+async def sil(ctx, amount=5):
     await ctx.channel.purge(limit=amount+1)
-    await ctx.send(f'{amount} messages deleted.')
+    await ctx.send(f'{amount} adet mesaj silindi!')
 
 
 
