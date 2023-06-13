@@ -60,6 +60,20 @@ async def on_guild_channel_delete(channel: discord.TextChannel):
 async def sil(ctx, amount=5):
     await ctx.channel.purge(limit=amount+1)
     await ctx.send(f'{amount} adet mesaj silindi!')
+    
+@Bot.command()
+@commands.has_permissions(manage_roles=True)
+async def sustur(ctx, member: discord.Member):
+    mute_role = discord.utils.get(ctx.guild.roles, name='Muted')
+    if not mute_role:
+        # Eğer "Muted" adında bir rol yoksa, rolü oluşturabilirsiniz.
+        mute_role = await ctx.guild.create_role(name='Muted')
+        # Gerekli kanallardan mesaj yazma iznini kaldırın
+        for channel in ctx.guild.channels:
+            await channel.set_permissions(mute_role, send_messages=False)
+    
+    await member.add_roles(mute_role)
+    await ctx.send(f'{member.mention} susturuldu.')
 
 
 
