@@ -80,13 +80,13 @@ async def sustur(ctx, member: discord.Member):
 
 @Bot.event
 async def on_member_join(member):
-    channel = Bot.get_channel(1118331806014505072)  # Hedeflenen oda ID'sini buraya girin
+    channel = member.guild.system_channel  # Hedeflenen oda ID'sini buraya girin
     if channel is not None: #burası olmasada çalışır eğer channel id girilmediyse terminalde hata verir program durur
         await channel.send(f"Merhaba {member.mention}, hoş geldin!")
 
 @Bot.event
 async def on_member_remove(member):
-    channel = Bot.get_channel(1118331806014505072)
+    channel = member.guild.system_channel
     if channel is not None: #burası olmasada çalışır eğer channel id girilmediyse terminalde hata verir program durur
         await channel.send(f"Görüşürüz {member.name}, hoşça kal!")
         
