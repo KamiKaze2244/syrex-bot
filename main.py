@@ -76,16 +76,17 @@ async def sustur(ctx, member: discord.Member):
     await member.add_roles(mute_role)
     await ctx.send(f'{member.mention} susturuldu.')
 
-@Bot.command()
-async def play(ctx):
-    time.sleep(2)
-    await ctx.send("bir hata oluştu ")
-
 @Bot.event
 async def on_member_join(member):
     channel = member.guild.system_channel  # Hoşgeldin mesajını göndereceğiniz kanalı belirtin
     if channel is not None:
         await channel.send(f'Hoş geldin {member.mention}!')  # Hoşgeldin mesajını gönderin
+        
+      
+@Bot.command()
+async def play(ctx):
+    time.sleep(2)
+    await ctx.send("bir hata oluştu ")
 
 
 Bot.run("MTExNjczNDQ4ODg4MjQ2MjgzMA.Gd8Dqf.VFDSw96932zdFGCXeuCFk-WDtWL5MfYE_46JNY")
