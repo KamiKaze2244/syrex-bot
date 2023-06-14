@@ -95,6 +95,7 @@ class Moderation(commands.Cog):
 s!selam             
 s!random            
 s!espiri            
+s!play              
 s!hentai            
 s!piç @etiket       
 s!orospu @etiket    `   

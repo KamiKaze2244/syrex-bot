@@ -1,7 +1,9 @@
 import discord
 from discord.ext import commands
+from pytube import YouTube
 import time
 import serverdata
+
 
 Bot = commands.Bot(command_prefix= "s!", intents= discord.Intents.all())
 
@@ -75,6 +77,39 @@ async def sustur(ctx, member: discord.Member):
     await member.add_roles(mute_role)
     await ctx.send(f'{member.mention} susturuldu.')
 
+@Bot.command()
+async def play(ctx, url):
+    voice_channel = ctx.author.voice.channel
+    if voice_channel is None:
+        await ctx.send("error")
+        return
+
+    # Müzik bağlantısını oluştur
+    voice_client = await voice_channel.connect()
+
+    # YouTube'dan sesi indir ve çal
+    try:
+        video = YouTube(url)
+        audio_url = video.streams.filter(only_audio=True).first().url
+        voice_client.play(discord.FFmpegPCMAudio(audio_url))
+    except Exception as e:
+        print("Error:", str(e))
+        await ctx.send("bir hata oluştu")
+
+
+@Bot.command()
+async def leave(ctx):
+    voice_channel = ctx.author.voice.channel
+    voice_client = discord.utils.get(Bot.voice_clients, guild=ctx.guild)
+    if voice_client and voice_client.is_connected() and voice_channel == voice_client.channel:
+        await voice_client.disconnect()
+        await ctx.send("çıkış yapıldı.")
+
+@Bot.event
+async def on_member_join(member):
+    channel = member.guild.system_channel  # Hoşgeldin mesajını göndereceğiniz kanalı belirtin
+    if channel is not None:
+        await channel.send(f'Hoş geldin {member.mention}!')  # Hoşgeldin mesajını gönderin
 
 
 Bot.run("MTExNjczNDQ4ODg4MjQ2MjgzMA.Gd8Dqf.VFDSw96932zdFGCXeuCFk-WDtWL5MfYE_46JNY")
