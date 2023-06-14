@@ -97,7 +97,7 @@ s!random
 s!espiri            
 s!play              
 s!hentai            
-s!boobs
+s!boobs             
 s!piç @etiket       
 s!orospu @etiket    `   
                        """)
