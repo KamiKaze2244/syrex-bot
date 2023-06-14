@@ -80,9 +80,15 @@ async def sustur(ctx, member: discord.Member):
 
 @Bot.event
 async def on_member_join(member):
-    channel = member.guild.system_channel  # Hoşgeldin mesajını göndereceğiniz kanalı belirtin
-    if channel is not None:
-        await channel.send(f'Hoş geldin {member.mention}!')  # Hoşgeldin mesajını gönderin
+    channel = Bot.get_channel(1118331806014505072)  # Hedeflenen oda ID'sini buraya girin
+    if channel is not None: #burası olmasada çalışır ama terminalde hata verir program durmaz
+        await channel.send(f"Merhaba {member.mention}, hoş geldin!")
+
+@Bot.event
+async def on_member_remove(member):
+    channel = Bot.get_channel(1118331806014505072)
+    if channel is not None: #burası olmasada çalışır ama terminalde hata verir program durmaz
+        await channel.send(f"Görüşürüz {member.name}, hoşça kal!")
         
       
 @Bot.command()
