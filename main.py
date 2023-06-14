@@ -3,7 +3,6 @@ from discord.ext import commands
 import time
 import serverdata
 
-#bu mesaj şimdilik
 
 Bot = commands.Bot(command_prefix= "s!", intents= discord.Intents.all())
 
