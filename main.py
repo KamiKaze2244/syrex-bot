@@ -1,6 +1,5 @@
 import discord
 from discord.ext import commands
-from pytube import YouTube
 import time
 import serverdata
 
@@ -78,32 +77,9 @@ async def sustur(ctx, member: discord.Member):
     await ctx.send(f'{member.mention} susturuldu.')
 
 @Bot.command()
-async def play(ctx, url):
-    voice_channel = ctx.author.voice.channel
-    if voice_channel is None:
-        await ctx.send("error")
-        return
-
-    # Müzik bağlantısını oluştur
-    voice_client = await voice_channel.connect()
-
-    # YouTube'dan sesi indir ve çal
-    try:
-        video = YouTube(url)
-        audio_url = video.streams.filter(only_audio=True).first().url
-        voice_client.play(discord.FFmpegPCMAudio(audio_url))
-    except Exception as e:
-        print("Error:", str(e))
-        await ctx.send("bir hata oluştu")
-
-
-@Bot.command()
-async def leave(ctx):
-    voice_channel = ctx.author.voice.channel
-    voice_client = discord.utils.get(Bot.voice_clients, guild=ctx.guild)
-    if voice_client and voice_client.is_connected() and voice_channel == voice_client.channel:
-        await voice_client.disconnect()
-        await ctx.send("çıkış yapıldı.")
+async def play(ctx):
+    time.sleep(2)
+    await ctx.send("bir hata oluştu ")
 
 @Bot.event
 async def on_member_join(member):
