@@ -6,6 +6,8 @@ import serverdata
 
 Bot = commands.Bot(command_prefix= "s!", intents= discord.Intents.all())
 
+token = input("tokeni girin : ")
+
 @Bot.event
 async def on_ready():
     await Bot.load_extension("cog") 
@@ -89,4 +91,4 @@ async def play(ctx):
     await ctx.send("bir hata oluştu ")
 
 
-Bot.run("MTExNjczNDQ4ODg4MjQ2MjgzMA.Gd8Dqf.VFDSw96932zdFGCXeuCFk-WDtWL5MfYE_46JNY")
+Bot.run(token)
