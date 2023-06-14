@@ -97,6 +97,7 @@ s!random
 s!espiri            
 s!play              
 s!hentai            
+s!boobs
 s!piç @etiket       
 s!orospu @etiket    `   
                        """)
@@ -215,8 +216,70 @@ s!orospu @etiket    `
             return await ctx.send("https://v.redd.it/90tnlcwt0b591/DASH_480.mp4")
         elif d==40:
             return await ctx.send("https://v.redd.it/51y6pnz1jj591/DASH_480.mp4")
-            
-
+        
+    @commands.command()
+    async def boobs(self, ctx):
+        b = random.randint(1, 20)
+        if b == 1:
+            await ctx.send("https://thechive.com/wp-content/uploads/2021/11/Bad-09_18_20-GIF-04-2.mp4?attachment_cache_bust=3875256")
+        elif b ==2:
+            await ctx.send("https://thechive.com/wp-content/uploads/2021/11/Bad-02_28_20-GIF-21-dbsciacca_rainbow.mp4?")
+        elif b ==3:
+            await ctx.send("https://thechive.com/wp-content/uploads/2021/11/Bad-02_28_20-GIF-21-dbsciacca_rainbow.mp4?attachment_cache_bust=3875253")
+        elif b ==4:
+            await ctx.send("https://i.gifer.com/1myU.gif")
+        elif b ==5:
+            await ctx.send("https://blovjob.com/content/2022/09/soft-tits-gifs_001.gif")
+        elif b ==6:
+            await ctx.send("https://nudebabes.realnakedgirls.net/wp-content/uploads/2019/12/perfect-example-of-perfection-bobobobobobobobobo-1577202032lc84p.mp4?_=1")
+        elif b ==7:
+            await ctx.send("https://cdn.sex.com/images/pinporn/2019/10/23/22032940.gif?width=620")
+        elif b ==8:
+            await ctx.send("https://64.media.tumblr.com/49f7f6c914b99e962397e8c56eb78660/tumblr_pia5djKFUT1wntbg1o2_400.gif")
+        elif b ==9:
+            await ctx.send("https://tse1.mm.bing.net/th?id=OIP.SWqFAyeeMM_LCUtrNENZXwAAAA&pid=15.1")
+        elif b ==10:
+            await ctx.send("https://tse1.mm.bing.net/th?id=OIP.QKDnbAd9Iboo7VYARW5cEwHaKz&pid=15.1")
+        elif b ==11:
+            await ctx.send("http://static-ca-cdn.eporner.com/photos/828196.gif")
+        elif b == 12:
+            await ctx.send("http://static-ca-cdn.eporner.com/gallery/Yc/mq/qtyhj3HmqYc/40637-squeeze-and-release.gif")
+        elif b ==13:
+            await ctx.send("https://cdn5-images.motherlessmedia.com/images/7CB3ED0.gif")
+        elif b ==14:
+            await ctx.send("https://tse3.mm.bing.net/th?id=OIP.eAvbn4FlDSHKmfvWKEQwxAAAAA&pid=15.1")
+        elif b ==15:
+            await ctx.send("https://tse3.mm.bing.net/th?id=OIP.kyz30Md4YRaZ55ck19y1uwHaFj&pid=15.1")
+        elif b ==16:
+            await ctx.send("https://www.pbh2.com/wordpress/wp-content/uploads/2015/08/bouncing-boobs-gifs.gif")
+        elif b ==17:
+            await ctx.send("https://i.gifer.com/78f6.gif")
+        elif b ==18:
+            await ctx.send("https://cdn.sex.com/images/pinporn/2018/07/24/19760644.gif?width=620")
+        elif b ==19:
+            await ctx.send("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2EwZjlhODU3OTA0MTQ4ZDM5ZmM4OWM2ODA4OTA4MTU2NTg4MmE1MSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/jxwPJ8ro1lM8E/giphy.gif")
+        elif b ==20:
+            await ctx.send("https://cdn.sex.com/images/pinporn/2019/06/12/21313092.gif?width=620")
+    
+    @commands.command()
+    async def sarkı(self, ctx):
+        b = random.randint(1,8)
+        if b ==1:
+            await ctx.send("https://www.youtube.com/watch?v=Rw3fkAd8NCU")
+        elif b ==2:
+            await ctx.send("https://www.youtube.com/watch?v=Z2suDDoiiDc")
+        elif b ==3:
+            await ctx.send("https://www.youtube.com/watch?v=0IrnPGapTdQ")
+        elif b ==4:
+            await ctx.send("https://youtu.be/OIpEDP8YB7w")
+        elif b ==5:
+            await ctx.send("https://www.youtube.com/watch?v=Opm7Z6ZJ9vI")
+        elif b ==6:
+            await ctx.send("https://www.youtube.com/watch?v=ydAUUcPrOVY")
+        elif b ==7:
+            await ctx.send("https://www.youtube.com/watch?v=IhbRI2lDDHE")
+        elif b ==8:
+            await ctx.send("https://www.youtube.com/watch?v=ZD08o1q3JIY")
 
 
 
