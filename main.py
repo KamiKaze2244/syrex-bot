@@ -7,6 +7,7 @@ import serverdata
 Bot = commands.Bot(command_prefix= "s!", intents= discord.Intents.all())
 
 token = input("tokeni girin : ")
+print("\n")
 
 @Bot.event
 async def on_ready():
@@ -59,10 +60,10 @@ async def on_guild_channel_delete(channel: discord.TextChannel):
     print("\n")
     
 @Bot.command()
-@commands.has_permissions(manage_messages=True)
-async def sil(ctx, amount=5):
-    await ctx.channel.purge(limit=amount+1)
-    await ctx.send(f'{amount} adet mesaj silindi!')
+@commands.has_permissions(administrator=True)
+async def sil(ctx, silis=5):
+    await ctx.channel.purge(limit=silis+1)
+    await ctx.send(f'{silis} adet mesaj silindi!')
     
 @Bot.command()
 @commands.has_permissions(manage_roles=True)
