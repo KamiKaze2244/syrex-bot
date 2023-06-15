@@ -78,6 +78,11 @@ async def sustur(ctx, member: discord.Member):
     
     await member.add_roles(mute_role)
     await ctx.send(f'{member.mention} susturuldu.')
+   
+@Bot.command()
+async def github(ctx):
+    user = ctx.author
+    await user.send("https://github.com/KamiKaze2244")
 
 @Bot.event
 async def on_member_join(member):

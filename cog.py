@@ -57,6 +57,7 @@ class Moderation(commands.Cog):
                 await ctx.send("Sucuk")
 
 
+
     @commands.command()
     async def piç(self, ctx, *, name):
         b = random.randint(1,3)
@@ -98,6 +99,7 @@ s!espiri
 s!play              
 s!hentai            
 s!boobs             
+s!github            
 s!piç @etiket       
 s!orospu @etiket    `   
                        """)
