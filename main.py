@@ -78,6 +78,12 @@ async def sustur(ctx, member: discord.Member):
     
     await member.add_roles(mute_role)
     await ctx.send(f'{member.mention} susturuldu.')
+
+@Bot.command()
+async def sunucubilgi(ctx):
+member_count = len(ctx.guild.members)
+await ctx.send(f"""`Sunucu bilgileri;¹
+Sunucudaki anlık aktif kişi sayısı : {member_count}`""")
    
 @Bot.command()
 async def github(ctx):
