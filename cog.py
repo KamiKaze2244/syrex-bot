@@ -99,7 +99,7 @@ s!espiri
 s!play              
 s!hentai            
 s!boobs             
-s!github            
+s!developer         
 s!piç @etiket       
 s!orospu @etiket    `   
                        """)

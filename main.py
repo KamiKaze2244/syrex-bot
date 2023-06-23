@@ -1,16 +1,17 @@
 import discord
 from discord.ext import commands
 import time
-import serverdata
-
+from settings import token
+from settings import channelid
+ 
 
 Bot = commands.Bot(command_prefix= "s!", intents= discord.Intents.all())
 
-token = input("tokeni girin : ")
 print("\n")
 
 @Bot.event
 async def on_ready():
+    channel = Bot.get_channel(int(channelid))
     await Bot.load_extension("cog") 
     print("""
    _____               __   __
@@ -23,21 +24,11 @@ async def on_ready():
          |___/  
     
     """)
-    time.sleep(3)
-    print("son güncellemeler kontrol ediliyor...")
-    time.sleep(4)
+    time.sleep(2)
     print("bot başarıyla çalıştırıldı!")
+    await channel.send(f"**{Bot.user.name}**, Çalıştırıldı!")
     print("\n")
 
-    
-    async def on_member_join(self, member):
-        channelID = serverdata.get_channel(member.guild)
-        if channelID != None or channelID != '0':
-            channel = self.get_channel(channelID)
-            if channel:
-                await channel.send("Sunucumuza {} isimli bir kullanıcı katıldı!".format(member.mention))
-            else:
-                return
             
 @Bot.event
 async def on_member_join(member: discord.Member):
@@ -81,14 +72,13 @@ async def sustur(ctx, member: discord.Member):
 
 @Bot.command()
 async def sunucubilgi(ctx):
-member_count = len(ctx.guild.members)
-await ctx.send(f"""`Sunucu bilgileri;¹
-Sunucudaki anlık aktif kişi sayısı : {member_count}`""")
+    member_count = len(ctx.guild.members)
+    await ctx.send(f"""`Sunucu bilgileri;¹
+    Sunucudaki anlık aktif kişi sayısı : {member_count}`""")
    
 @Bot.command()
-async def github(ctx):
-    user = ctx.author
-    await user.send("https://github.com/KamiKaze2244")
+async def developer(ctx):
+    await ctx.send("**Discord Bot Developer**, `Kamikaze#0011` **Github ->** https://github.com/KamiKaze2244")
 
 @Bot.event
 async def on_member_join(member):

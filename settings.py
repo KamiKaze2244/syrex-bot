@@ -1,0 +1,2 @@
+token = "MTExNjczNDQ4ODg4MjQ2MjgzMA.G6dFii.10pI0jlZHrdMA3k4QiNK9TA9oG2zyQasafWMCc"
+channelid = "1117177438804394016"
